@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>One Kin Site</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./modal.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <p class="navitem">Slack</p>
+      <p class="navitem">Twitter</p>
+      <p class="navitem">GitHub</p>
+      <div id="add-project" class="navitem">
+        <p>Add Project</p>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close_modal">&times;</span>
+            <form id="form1">
+              <label>
+                <p>Project Name </p><input type="text" id="project_name" placeholder="enter project name">
+              </label>
+              <label>
+                <p>Project Link </p><input type="text" id="project_link" placeholder="enter project link">
+              </label>
+              <label>
+                <p>Project Description</p> <textarea id="project_description"></textarea>
+              </label>
+
+            </form>
+            <button id="add_to_projects">ADD</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-info">
+      <p id="contribute">
+        Make your first open source contribution in 5 minutes
+      </p>
+      <button id="get-started">
+        Get Started
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="search-filter">
+      <input id="search" type="text" placeholder="Search...">
+      <select name="" id="filter" placeholder="">
+        <option class="filter-option" style="display: none" value="">Filter</option>
+        <option value="">Web Dev</option>
+      </select>
+    </div>
+
+    <section class="projects">
+      <div class="project">
+        <img src="./OSP logos/rn.JPG" alt="" class="logo">
+        <h2 class="title">React</h2>
+        <div class="technologies">
+          <p>javascript</p>
+          <p>UI</p>
+          <p>Web App</p>
+        </div>
+        <p class="info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
+        </p>
+        <a href="" class="goto">Go to Project</a>
+      </div>
+      <div class="project">
+        <img src="./OSP logos/rn.JPG" alt="" class="logo">
+        <h2 class="title">React</h2>
+        <div class="technologies">
+          <p>javascript</p>
+          <p>UI</p>
+          <p>Web App</p>
+        </div>
+        <p class="info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
+        </p>
+        <a href="" class="goto">Go to Project</a>
+      </div>
+      <div class="project">
+        <img src="./OSP logos/rn.JPG" alt="" class="logo">
+        <h2 class="title">React</h2>
+        <div class="technologies">
+          <p>javascript</p>
+          <p>UI</p>
+          <p>Web App</p>
+        </div>
+        <p class="info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
+        </p>
+        <a href="" class="goto">Go to Project</a>
+      </div>
+      <div class="project">
+        <img src="./OSP logos/rn.JPG" alt="" class="logo">
+        <h2 class="title">React</h2>
+        <div class="technologies">
+          <p>javascript</p>
+          <p>UI</p>
+          <p>Web App</p>
+        </div>
+        <p class="info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
+        </p>
+        <a href="" class="goto">Go to Project</a>
+      </div>
+      <div class="project">
+        <img src="./OSP logos/rn.JPG" alt="" class="logo">
+        <h2 class="title">React</h2>
+        <div class="technologies">
+          <p>javascript</p>
+          <p>UI</p>
+          <p>Web App</p>
+        </div>
+        <p class="info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
+        </p>
+        <a href="" class="goto">Go to Project</a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
