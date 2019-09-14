@@ -1,4 +1,9 @@
 <html lang="en">
+<!-- 
+Features to add:
+1. The user custom add function.
+2. A function which dynamically adds the info of each card
+3.  -->
 
 <head>
   <meta charset="UTF-8">
@@ -21,18 +26,26 @@
           <div class="modal-content">
             <span class="close_modal">&times;</span>
             <form id="form1">
-              <label>
-                <p>Project Name </p><input type="text" id="project_name" placeholder="enter project name">
+              <label for="">
+                Project Name
+                <input type="text" name="projName" id=""></label>
+              <label for="">
+                Project Description
+                <input type="text" name="projDesc" id=""></label>
+              <label for="">
+                Tags
+                <input type="text" name="projTags" id="" placeholder=" separated by comma"></label>
+              <label for="">
+                Image Source
+                <select style="margin: 0 2vw;" name="" id="">
+                  <option value="">Hello</option>
+                </select>
+                <label for=""><input type="text" name="" id="" placeholder="Image url"></label>
               </label>
-              <label>
-                <p>Project Link </p><input type="text" id="project_link" placeholder="enter project link">
-              </label>
-              <label>
-                <p>Project Description</p> <textarea id="project_description"></textarea>
-              </label>
-
+              <div class="butholder">
+                <button id="addProject">Add</button>
+              </div>
             </form>
-            <button id="add_to_projects">ADD</button>
           </div>
         </div>
       </div>
@@ -70,58 +83,7 @@
         </p>
         <a href="" class="goto">Go to Project</a>
       </div>
-      <div class="project">
-        <img src="./OSP logos/rn.JPG" alt="" class="logo">
-        <h2 class="title">React</h2>
-        <div class="technologies">
-          <p>javascript</p>
-          <p>UI</p>
-          <p>Web App</p>
-        </div>
-        <p class="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
-        </p>
-        <a href="" class="goto">Go to Project</a>
-      </div>
-      <div class="project">
-        <img src="./OSP logos/rn.JPG" alt="" class="logo">
-        <h2 class="title">React</h2>
-        <div class="technologies">
-          <p>javascript</p>
-          <p>UI</p>
-          <p>Web App</p>
-        </div>
-        <p class="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
-        </p>
-        <a href="" class="goto">Go to Project</a>
-      </div>
-      <div class="project">
-        <img src="./OSP logos/rn.JPG" alt="" class="logo">
-        <h2 class="title">React</h2>
-        <div class="technologies">
-          <p>javascript</p>
-          <p>UI</p>
-          <p>Web App</p>
-        </div>
-        <p class="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
-        </p>
-        <a href="" class="goto">Go to Project</a>
-      </div>
-      <div class="project">
-        <img src="./OSP logos/rn.JPG" alt="" class="logo">
-        <h2 class="title">React</h2>
-        <div class="technologies">
-          <p>javascript</p>
-          <p>UI</p>
-          <p>Web App</p>
-        </div>
-        <p class="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
-        </p>
-        <a href="" class="goto">Go to Project</a>
-      </div>
+      
     </section>
   </main>
   <script src="script.js"></script>

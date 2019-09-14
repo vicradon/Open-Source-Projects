@@ -22,3 +22,30 @@
   width: 100%;
   font-size: 1rem;
 }
+form {
+  color: black;
+  font-size: 1rem;
+}
+form input {
+  margin: 2vh 0;
+  padding: 0.5rem;
+}
+.butholder {
+  display: flex;
+  justify-content: flex-end;
+}
+#addProject {
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  outline: 0;
+  background-color: #007ee5;
+}
+#addProject:active {
+  background-color: white;
+  color: #007ee5;
+  border: 1px solid #007ee5;
+}
+form select {
+  padding: 0.4rem 2rem;
+}

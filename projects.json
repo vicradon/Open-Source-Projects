@@ -1,0 +1,23 @@
+{
+  "1": {
+    "title": "React Native",
+    "img_src": "./OSP logos/rn.JPG",
+    "tags": [
+      "javascript",
+      "node",
+      "mobile app"
+    ],
+    "description": "A technology which is used to create cross platform mobile apps using web technologies"
+  },
+  "2": {
+    "title": "Guage",
+    "img_src": "./OSP logos/rn.JPG",
+    "tags": [
+      "Automation",
+      "Golang",
+      "command line",
+      "testing"
+    ],
+    "description": "A feee and open source test automation framework"
+  }
+}
