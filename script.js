@@ -17,6 +17,7 @@ console.log(this)
 $('#add-project').onclick = enable_modal;
 $('.close_modal').onclick = () => $('.modal').style.display = "none";
 
+
 $('#form1').addEventListener('submit', e => {
   e.preventDefault();
 })
@@ -35,10 +36,10 @@ async function addFromJSON() {
   
   let frag = document.createDocumentFragment();
   for (let i in data) {
-    console.log(i)
+    console.log(i);
    // for (let j in i) log(j);
     const { title, img_src, tags, description } = data[i];
-    console.log(title,img_src,tags,description)
+    console.log(title,img_src,tags,description);
      
     // let clonedTemplate = $('.project').cloneNode(true);
     // qs(clonedTemplate, '.title').textContent = title;
