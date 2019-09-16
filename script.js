@@ -1,13 +1,17 @@
-const $ = b => document.querySelector(b);
-const log = n => console.log(n);
+let $ = b => document.querySelector(b);
+let log = n => console.log(n);
 
 const projects = $('.projects');
 
-const enable_modal = () => {
-  const modal = $('.modal');
+let enable_modal = () => {
+  let modal = $('.modal');
   modal.style.display = "block";
   window.onclick = event => {
-    if (event.target === modal) modal.style.display = "none";
+    if (event.target === modal) {
+console.log(this)
+ //console.log(event.target)
+      modal.style.display = "none";}
+   
   }
 }
 $('#add-project').onclick = enable_modal;
@@ -16,20 +20,26 @@ $('.close_modal').onclick = () => $('.modal').style.display = "none";
 $('#form1').addEventListener('submit', e => {
   e.preventDefault();
 })
-$('#addProject').onclick = () => {
-  $('.modal').style.display = "none";
-  log($('.modal'))
+$('#add_to_projects').onclick = (e) => {
+  e.stopPropagation();
+  $('.modal').style.display ="none";
+  log($('.modal').style);
 }
+//
 const qs = (n, elem) => n.querySelector(elem);
 
 async function addFromJSON() {
   const response = await fetch("./projects.json");
   const data = await response.json();
+  console.log(data);
   
   let frag = document.createDocumentFragment();
   for (let i in data) {
-    for (let j in i) log(j);
-    // const { title, img_src, tags, description } = i;
+    console.log(i)
+   // for (let j in i) log(j);
+    const { title, img_src, tags, description } = data[i];
+    console.log(title,img_src,tags,description)
+     
     // let clonedTemplate = $('.project').cloneNode(true);
     // qs(clonedTemplate, '.title').textContent = title;
     // qs(clonedTemplate, '.info').textContent = description;
