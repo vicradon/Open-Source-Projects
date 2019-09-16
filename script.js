@@ -1,10 +1,10 @@
-let $ = b => document.querySelector(b);
-let log = n => console.log(n);
+const $ = b => document.querySelector(b);
+const log = n => console.log(n);
 
 const projects = $('.projects');
 
-let enable_modal = () => {
-  let modal = $('.modal');
+const enable_modal = () => {
+const modal = $('.modal');
   modal.style.display = "block";
   window.onclick = event => {
     if (event.target === modal) {
