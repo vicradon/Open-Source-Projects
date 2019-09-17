@@ -4,57 +4,106 @@ const log = n => console.log(n);
 const projects = $('.projects');
 
 const enable_modal = () => {
-const modal = $('.modal');
+  $('html').style.overflow = "hidden";
+  const modal = $('.modal');
   modal.style.display = "block";
   window.onclick = event => {
     if (event.target === modal) {
-console.log(this)
- //console.log(event.target)
-      modal.style.display = "none";}
-   
+      //console.log(this)
+      modal.style.display = "none";
+      $('html').style.overflow = "visible";
+    }
   }
 }
 $('#add-project').onclick = enable_modal;
-$('.close_modal').onclick = () => $('.modal').style.display = "none";
+$('#close-modal').onclick = () => {
+  $('.modal').style.display = "none";
+  log('Modal not closing');
+}
 
 
 $('#form1').addEventListener('submit', e => {
   e.preventDefault();
 })
-$('#add_to_projects').onclick = (e) => {
-  e.stopPropagation();
-  $('.modal').style.display ="none";
-  log($('.modal').style);
-}
-//
+// $('#add_to_projects').onclick = (e) => {
+//   e.stopPropagation();
+//   $('.modal').style.display = "none";
+//   log($('.modal').style);
+// }
 const qs = (n, elem) => n.querySelector(elem);
+const $$ = n => document.querySelectorAll(n);
+
+function fragment(data) {
+  let frag = document.createDocumentFragment();
+  for (let i in data) {
+    const { title, img_src, tags, description } = data[i];
+    let clonedTemplate = $('.project').cloneNode(true);
+    qs(clonedTemplate, '.title').textContent = title;
+    qs(clonedTemplate, '.logo').src = img_src;
+    qs(clonedTemplate, '.technologies').innerHTML = '';
+    tags.forEach(x => {
+      let a = document.createElement('p');
+      a.textContent = x;
+      qs(clonedTemplate, '.technologies').appendChild(a)
+    });
+    qs(clonedTemplate, '.info').textContent = description;
+    qs(clonedTemplate, '.info').textContent = description;
+    frag.appendChild(clonedTemplate);
+  }
+  $('.projects').appendChild(frag);
+  delete frag;
+}
+
 
 async function addFromJSON() {
   const response = await fetch("./projects.json");
   const data = await response.json();
-  console.log(data);
-  
-  let frag = document.createDocumentFragment();
-  for (let i in data) {
-    console.log(i);
-   // for (let j in i) log(j);
-    const { title, img_src, tags, description } = data[i];
-    console.log(title,img_src,tags,description);
-     
-    // let clonedTemplate = $('.project').cloneNode(true);
-    // qs(clonedTemplate, '.title').textContent = title;
-    // qs(clonedTemplate, '.info').textContent = description;
-    // qs(clonedTemplate, '.info').textContent = description;
-    // frag.appendChild(clonedTemplate);
-  }
-  $('.projects').appendChild(frag);
-  delete frag;
+  fragment(data);
 }
 addFromJSON();
 
 
 
+function addFromIndex() {
+  let data = {
+    "title": `${$('#project-name').value}`,
+    "project link": `${$('#project-link').value}`,
+    "tags": $('#project-tags').value.split(','),
+    "description": `${$('#project-description').value}`,
+    "Image URL": `${$('#image-url').value}`,
+  };
+  log(data);
+  
+  for (let i of $$('#choose-image option')){
+    if (i.selected === "react"){
+      data["Image URL"] = "./OSP logos/rn.JPG";
+    }
+    else if (i.selected === "guage"){
+      data["Image URL"] = "./OSP logos/guage.png";
+    }
+  }
+  fragment({data});
+  /*let frag = document.createDocumentFragment();
+  for (let i in data) {
+    const { title, img_src, tags, description } = data[i];
+    let clonedTemplate = $('.project').cloneNode(true);
+    qs(clonedTemplate, '.title').textContent = title;
+    qs(clonedTemplate, '.logo').src = img_src;
+    qs(clonedTemplate, '.technologies').innerHTML = '';
+    tags.forEach(x => {
+      let a = document.createElement('p');
+      a.textContent = x;
+      qs(clonedTemplate, '.technologies').appendChild(a)
+    });
+    qs(clonedTemplate, '.info').textContent = description;
+    qs(clonedTemplate, '.info').textContent = description;
+    frag.appendChild(clonedTemplate);
+  }
+  $('.projects').appendChild(frag);
+  delete frag;*/
+}
 
+$('#add-to-projects').onclick = addFromIndex;
 
 
 

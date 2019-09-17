@@ -17,8 +17,56 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80vw;
+  color: rgba(0, 0, 0, 0.726);
+}
+.modal-content label p {
+  padding-bottom: 0;
+  padding-top: 2vh;
+  font-size: 1rem;
 }
 #form1 input, #form1 textarea {
   width: 100%;
   font-size: 1rem;
+  border-radius: 0.2em;
+  border: 1px solid #007ee5;
+}
+#form1 input {
+  padding: 0.5rem 0.6vw;
+}
+.close-modal {
+  display: flex;
+  font-size: 1.3em;
+  justify-content: space-between;
+}
+.close-modal span:nth-child(1){
+  text-transform: uppercase;
+  color: #007ee5;
+  font-size: 0.8em;
+}
+#project-description {
+  font-family: inherit;
+  padding: 1vh 0.6vw;
+  font-size: 1em;
+  overflow-wrap: break-word;
+  height: 15vh;
+}
+#close-modal {
+  color: red;
+}
+#add-to-projects-container {
+  display: flex;
+  justify-content: flex-end;
+}
+#add-to-projects{
+  background-color: #0463b1;
+  border-radius: 1rem;
+  padding: 0.3em 1.5em;
+  color: white;
+  font-size: 1em;
+  margin-top:1vh;
+}
+#add-to-projects:hover{
+  background-color: white;
+  color: #0463b1;
+  border: 1px solid #0463b1
 }

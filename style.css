@@ -129,12 +129,12 @@ main {
   border-radius: 0.8em;
   font-size: 0.7em;
   padding: 0.4rem;
+  margin: 0.4em 0.2em;
 }
-/* .info {
-  padding-bottom: 5vh;
-} */
-
-
+#choose-image {
+  font-size: 0.7em;
+  padding:0.5rem;
+}
 
 @media (max-width:1000px){
   #get-started {

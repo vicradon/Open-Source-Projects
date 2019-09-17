@@ -19,20 +19,40 @@
         <p>Add Project</p>
         <div class="modal" id="modal">
           <div class="modal-content">
-            <span class="close_modal">&times;</span>
+            <span class="close-modal">
+              <span>Add projects here</span>
+              <span id = "close-modal">&times;</span> 
+            </span>
             <form id="form1">
               <label>
-                <p>Project Name </p><input type="text" id="project_name" placeholder="enter project name">
+                <p style="padding-top:0">Project Name </p><input type="text" id="project-name" placeholder="enter project name">
               </label>
               <label>
-                <p>Project Link </p><input type="text" id="project_link" placeholder="enter project link">
+                <p>Project Link </p><input type="text" id="project-link" placeholder="enter project link">
               </label>
               <label>
-                <p>Project Description</p> <textarea id="project_description"></textarea>
+                <p>Tags</p><input type="text" id="project-tags" placeholder="enter tags separated by commas">
+              </label>
+              <label>
+                <p>Project Description</p> <textarea id="project-description" placeholder="enter project's description"></textarea>
+              </label>
+              <label>
+                <p>Paste Image URL</p>
+                <input type="text" id="image-url" placeholder="enter url here">
+              </label>
+              <label>
+                <p>Or Choose Image</p>
+                <select name="" id="choose-image">
+                  <option value="">Choose Image</option>
+                  <option value="react">React Native Logo</option>
+                  <option value="guage">Guage Logo</option>
+                </select>
               </label>
 
             </form>
-            <button id="add_to_projects">ADD</button>
+            <div id="add-to-projects-container">
+              <span id="add-to-projects">Add</span>
+            </div>
           </div>
         </div>
       </div>
@@ -57,58 +77,6 @@
     </div>
 
     <section class="projects">
-      <div class="project">
-        <img src="./OSP logos/rn.JPG" alt="" class="logo">
-        <h2 class="title">React</h2>
-        <div class="technologies">
-          <p>javascript</p>
-          <p>UI</p>
-          <p>Web App</p>
-        </div>
-        <p class="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
-        </p>
-        <a href="" class="goto">Go to Project</a>
-      </div>
-      <div class="project">
-        <img src="./OSP logos/rn.JPG" alt="" class="logo">
-        <h2 class="title">React</h2>
-        <div class="technologies">
-          <p>javascript</p>
-          <p>UI</p>
-          <p>Web App</p>
-        </div>
-        <p class="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
-        </p>
-        <a href="" class="goto">Go to Project</a>
-      </div>
-      <div class="project">
-        <img src="./OSP logos/rn.JPG" alt="" class="logo">
-        <h2 class="title">React</h2>
-        <div class="technologies">
-          <p>javascript</p>
-          <p>UI</p>
-          <p>Web App</p>
-        </div>
-        <p class="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
-        </p>
-        <a href="" class="goto">Go to Project</a>
-      </div>
-      <div class="project">
-        <img src="./OSP logos/rn.JPG" alt="" class="logo">
-        <h2 class="title">React</h2>
-        <div class="technologies">
-          <p>javascript</p>
-          <p>UI</p>
-          <p>Web App</p>
-        </div>
-        <p class="info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, provident.
-        </p>
-        <a href="" class="goto">Go to Project</a>
-      </div>
       <div class="project">
         <img src="./OSP logos/rn.JPG" alt="" class="logo">
         <h2 class="title">React</h2>
